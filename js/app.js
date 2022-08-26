@@ -1,6 +1,27 @@
 'use strict'
 
+
 window.addEventListener('DOMContentLoaded', () => {
+
+    //Бургер
+
+    const hamburger = document.querySelector('.hamburger'),
+        menu = document.querySelector('.menu'),
+        closeElem = document.querySelector('.menu__close'),
+        menuOverlay = document.querySelector('.menu__overlay');
+
+    hamburger.addEventListener('click', () => {
+        menu.classList.add('active');
+    });
+
+    closeElem.addEventListener('click', () => {
+        menu.classList.remove('active');
+    });
+
+    menuOverlay.addEventListener('click', () => {
+        menu.classList.remove('active');
+    });
+
 
     //Показа подчеркиваний в навигации
     const menuList = document.querySelector('.header__nav-list');
@@ -63,7 +84,6 @@ window.addEventListener('DOMContentLoaded', () => {
         const target = event.target;
         console.log(target);
         if (target && target.classList.contains('header__slider-dot-item')) {
-            console.log('123');
             dots.forEach((item, i) => {
                 if (target == item) {
                     hideSliderContent();
@@ -72,5 +92,50 @@ window.addEventListener('DOMContentLoaded', () => {
             })
         }
     })
+
+    //Video
+    const video = document.querySelector('.video');
+    const playBtn = document.querySelector('.controls__play');
+    const stopBtn = document.querySelector('.controls__stop');
+
+    function hideControlPlay() {
+        playBtn.classList.add('hide');
+        playBtn.classList.remove('show', 'fade');
+    }
+
+    function showControlPlay() {
+        playBtn.classList.remove('hide');
+        playBtn.classList.add('show', 'fade');
+    }
+
+    function hideControlStop() {
+        stopBtn.classList.add('hide');
+        stopBtn.classList.remove('show', 'fade');
+    }
+
+    function showControlStop() {
+        stopBtn.classList.remove('hide');
+        stopBtn.classList.add('show', 'fade');
+    }
+
+    showControlPlay();
+    hideControlStop();
+
+
+    playBtn.addEventListener('click', () => {
+        if (video.paused) {
+            video.play();
+            hideControlPlay();
+            showControlStop();
+        }
+    });
+
+    stopBtn.addEventListener('click', () => {
+        if (!video.paused) {
+            video.pause();
+            hideControlStop();
+            showControlPlay();
+        }
+    });
 
 });

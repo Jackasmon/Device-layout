@@ -5,4 +5,25 @@
     text-transform: uppercase;
     border-radius: 4px;
     color: #fff;
+    transition: all 0.4s;
+
+    &:hover {
+        background: rgb(224, 108, 19);
+    }
+}
+
+@mixin input {
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 7px;
+    color: #3D3D3D;
+    height: 40px;
+    padding-left: 13px;
+
+    &:focus-within {
+        color: #000;
+    }
 }

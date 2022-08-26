@@ -1,17 +1,46 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Новый Сайт</title>
+    <title>Devices</title>
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+    <div class="menu">
+        <div class="menu__block">
+            <div class="menu__close"><svg width="29" height="30" viewBox="0 0 29 30" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.1568 14.5231L28.4489 3.23075C29.1837 2.49623 29.1837 1.30861 28.4489 0.574085C27.7144 -0.160437 26.5267 -0.160437 25.7922 0.574085L14.4998 11.8665L3.20781 0.574085C2.47295 -0.160437 1.28567 -0.160437 0.551149 0.574085C-0.183717 1.30861 -0.183717 2.49623 0.551149 3.23075L11.8432 14.5231L0.551149 25.8155C-0.183717 26.55 -0.183717 27.7376 0.551149 28.4721C0.917206 28.8385 1.39852 29.0226 1.87948 29.0226C2.36045 29.0226 2.84141 28.8385 3.20781 28.4721L14.4998 17.1798L25.7922 28.4721C26.1586 28.8385 26.6396 29.0226 27.1205 29.0226C27.6015 29.0226 28.0825 28.8385 28.4489 28.4721C29.1837 27.7376 29.1837 26.55 28.4489 25.8155L17.1568 14.5231Z"
+                        fill="black" />
+                </svg></div>
+            <nav>
+                <ul class="menu__list">
+                    <li class="menu__link"><a href="#">HOME</a></li>
+                    <li class="menu__link"><a href="#">PRODUCTS</a></li>
+                    <li class="menu__link"><a href="#">SERVICES</a></li>
+                    <li class="menu__link"><a href="#">RESOURCES</a></li>
+                    <li class="menu__link"><a href="#">ABOUT</a></li>
+                    <li class="menu__link"><a href="#">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu__overlay">
+        </div>
+    </div>
     <header class="header">
-        <div class="header__top">
+        <div class="header__top" id="top">
             <div class="header__logo">
                 <svg width="78" height="100" viewBox="0 0 78 100" fill="none" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -29,6 +58,11 @@
                             xlink:href="data:image/png;base64,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" />
                     </defs>
                 </svg>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span class="long"></span>
+                <span></span>
             </div>
             <nav class="header__nav">
                 <ul class="header__nav-list">
@@ -49,7 +83,15 @@
             </nav>
         </div>
         <div class="header__content">
+            <div class="header__twitter-media">
+                <svg width="151" height="124" viewBox="0 0 151 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M135.139 31.1763C135.23 32.4953 135.23 33.8144 135.23 35.1455C135.23 75.7069 104.3 122.487 47.7416 122.487V122.462C31.0342 122.487 14.6738 117.709 0.608887 108.701C3.03828 108.992 5.47985 109.138 7.92752 109.144C21.7732 109.157 35.2232 104.519 46.1159 95.9785C32.9582 95.7293 21.4201 87.1647 17.3894 74.6614C21.9985 75.5489 26.7477 75.3665 31.2716 74.1326C16.9266 71.2393 6.60627 58.6569 6.60627 44.0444C6.60627 43.9106 6.60627 43.783 6.60627 43.6553C10.8805 46.032 15.6663 47.351 20.5616 47.4969C7.05074 38.4826 2.88606 20.5391 11.0449 6.51005C26.6564 25.6875 49.69 37.3459 74.4162 38.5798C71.9381 27.9183 75.3234 16.7461 83.3118 9.25142C95.6963 -2.37054 115.174 -1.77485 126.816 10.5826C133.702 9.22711 140.302 6.70456 146.342 3.13044C144.047 10.2361 139.243 16.272 132.825 20.1075C138.92 19.3902 144.875 17.7612 150.482 15.2751C146.354 21.4508 141.155 26.8302 135.139 31.1763Z"
+                        fill="white" />
+                </svg>
+            </div>
             <div class="header__wrapper">
+
                 <h1 class="header__title">Device Authentication</h1>
                 <h2 class="header__subtitle">SALT Group is a world leader in authentication and security. We have
                     a range of services to improve user authentication.
@@ -80,7 +122,7 @@
                 </div>
                 <div class="header__slider-dot">
                     <div>
-                        <svg class="header__slider-dot-item" class="svg" width="19" height="22" viewBox="0 0 19 22"
+                        <svg class="header__slider-dot-item" width="19" height="22" viewBox="0 0 19 22"
                             xmlns="http://www.w3.org/2000/svg">
                             <path clip-rule="evenodd" d="M9.5 1.90526L1.64545 6.45263V15.5474L9.5 20.0947L17.3546 
                                 15.5474V6.45263L9.5 1.90526ZM19 5.5L9.5 0L0 5.5V16.5L9.5 22L19 
@@ -88,14 +130,14 @@
                         </svg>
                     </div>
                     <div>
-                        <svg class="header__slider-dot-item" class="svg" width="19" height="22" viewBox="0 0 19 22"
+                        <svg class="header__slider-dot-item" width="19" height="22" viewBox="0 0 19 22"
                             xmlns="http://www.w3.org/2000/svg">
                             <path clip-rule="evenodd"
                                 d="M9.5 1.90526L1.64545 6.45263V15.5474L9.5 20.0947L17.3546 15.5474V6.45263L9.5 1.90526ZM19 5.5L9.5 0L0 5.5V16.5L9.5 22L19 16.5V5.5Z" />
                         </svg>
                     </div>
                     <div>
-                        <svg class="header__slider-dot-item" class="svg" width="19" height="22" viewBox="0 0 19 22"
+                        <svg class="header__slider-dot-item" width="19" height="22" viewBox="0 0 19 22"
                             xmlns="http://www.w3.org/2000/svg">
                             <path clip-rule="evenodd"
                                 d="M9.5 1.90526L1.64545 6.45263V15.5474L9.5 20.0947L17.3546 15.5474V6.45263L9.5 1.90526ZM19 5.5L9.5 0L0 5.5V16.5L9.5 22L19 16.5V5.5Z" />
@@ -106,11 +148,10 @@
         </div>
         <div class="header__fined-out">
             find out more
-            <a href="#">
-                <svg width="62" height="71" viewBox="0 0 62 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <a href="#what">
+                <svg width="62" height="71" viewBox="0 0 62 71" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M62 17.75L31 0L0 17.75V53.25L31 71L62 53.25V17.75ZM31 3.28249L59.1336 19.3912V51.6087L31 67.7175L2.8664 51.6087V19.3912L31 3.28249ZM19.2596 31.0114C18.4375 30.3157 17.207 30.4183 16.5114 31.2404C15.8157 32.0625 15.9183 33.293 16.7404 33.9886L29.7404 44.9886C30.4675 45.6038 31.5325 45.6038 32.2596 44.9886L45.2596 33.9886C46.0817 33.293 46.1843 32.0625 45.4886 31.2404C44.793 30.4183 43.5625 30.3157 42.7404 31.0114L31 40.9456L19.2596 31.0114Z"
-                        fill="#FF8B00" />
+                        d="M62 17.75L31 0L0 17.75V53.25L31 71L62 53.25V17.75ZM31 3.28249L59.1336 19.3912V51.6087L31 67.7175L2.8664 51.6087V19.3912L31 3.28249ZM19.2596 31.0114C18.4375 30.3157 17.207 30.4183 16.5114 31.2404C15.8157 32.0625 15.9183 33.293 16.7404 33.9886L29.7404 44.9886C30.4675 45.6038 31.5325 45.6038 32.2596 44.9886L45.2596 33.9886C46.0817 33.293 46.1843 32.0625 45.4886 31.2404C44.793 30.4183 43.5625 30.3157 42.7404 31.0114L31 40.9456L19.2596 31.0114Z" />
                 </svg>
             </a>
         </div>
@@ -146,7 +187,7 @@
             </div>
         </div>
     </section>
-    <section class="what-do">
+    <section class="what-do" id="what">
         <div class="what-do__container">
             <h2 class="what-do__title">
                 What We Do
@@ -273,14 +314,155 @@
                     <button class="spotlight__btn">MORE INFO</button>
                 </div>
                 <div class="spotlight__video">
-                    <video autoplay controls poster="img/video-bg.webp">
+                    <video poster="img/player/video-bg.webp" class="video">
                         <source src="video/spotlight-video.mp4">
                         Ваш браузер не поддерживает видео!
                     </video>
+                    <div class="controls">
+                        <div class="controls__play"><img src="img/player/play.svg" alt="">
+                            <div class="controls__subplay">Feature video</div>
+                            <div class="controls__text">
+                                mSign Connected token</div>
+                        </div>
+                        <div class="controls__stop"><img src="img/player/stop.svg" alt=""></div>
+
+                    </div>
                 </div>
+                <button class="spotlight__btn spotlight__btn-media">MORE INFO</button>
             </div>
         </div>
     </section>
+    <section class="contact-us">
+        <div class="contact-us__container">
+            <div class="contact-us__wrapper">
+                <div class="contact-us__title">
+                    <span>Ready </span>
+                    to get started?
+                </div>
+                <form action="#" class="contact-us__form">
+                    <div class="contact-us__form-title">
+                        Contact us
+                    </div>
+                    <div class="contact-us__form-wrapper">
+                        <div class="contact-us__form-name">
+                            <div class="contact-us__form-subtitle">
+                                First Name
+                            </div>
+                            <input required type="text" name="name" placeholder="First Name">
+                        </div>
+                        <div class="contact-us__form-surname">
+                            <div class="contact-us__form-subtitle">
+                                Last Name
+                            </div>
+                            <input required type="text" name="surname" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="contact-us__form-email">
+                        <div class="contact-us__form-subtitle">
+                            Email Address
+                        </div>
+                        <input required type="email" name="email" placeholder="Email Address">
+                    </div>
+                    <div class="contact-us__form-message">
+                        <div class="contact-us__form-subtitle">
+                            Your message
+                        </div>
+                        <textarea required name="textarea" class="contact-us__form-text"
+                            placeholder="Textarea"></textarea>
+                    </div>
+                    <button class="contact-us__form-btn">
+                        SEND
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="divider"></section>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__wrapper">
+                <div class="footer__twitter">
+                    <div class="footer__twitter-header">
+                        <div class="footer__twitter-logo">
+                            <svg width="39" height="39" viewBox="0 0 39 39" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.5 39C30.2696 39 39 30.2696 39 19.5C39 8.73045 30.2696 0 19.5 0C8.73045 0 0 8.73045 0 19.5C0 30.2696 8.73045 39 19.5 39ZM37.5 19.5C37.5 29.4411 29.4411 37.5 19.5 37.5C9.55887 37.5 1.5 29.4411 1.5 19.5C1.5 9.55887 9.55887 1.5 19.5 1.5C29.4411 1.5 37.5 9.55887 37.5 19.5ZM26.7246 17.4681C26.7246 17.3178 26.7246 17.1689 26.7143 17.02C27.3916 16.5293 27.977 15.9219 28.4417 15.2247C27.8104 15.5053 27.14 15.6893 26.4538 15.7702C27.1763 15.3372 27.7172 14.6557 27.9756 13.8535C27.2956 14.257 26.5525 14.5418 25.7773 14.6949C24.4666 13.2997 22.2738 13.2324 20.8795 14.5446C19.9801 15.3907 19.599 16.6521 19.878 17.8558C17.0942 17.7165 14.5011 16.4002 12.7435 14.2351C11.8249 15.819 12.2938 17.8449 13.8149 18.8626C13.2638 18.8461 12.725 18.6972 12.2438 18.4289V18.4728C12.2438 20.1226 13.4056 21.5432 15.0206 21.8699C14.5113 22.0092 13.9767 22.0298 13.4577 21.9296C13.9115 23.3412 15.2105 24.3082 16.6919 24.3363C15.4655 25.3005 13.9513 25.8242 12.3925 25.8228C12.1169 25.8221 11.8421 25.8056 11.5686 25.7727C13.152 26.7898 14.9939 27.3292 16.8749 27.3264V27.3292C23.2423 27.3292 26.7246 22.0476 26.7246 17.4681Z"
+                                    fill="white" />
+                            </svg>
+
+                        </div>
+                        <div class="footer__twitter-text">
+                            <div class="footer__twitter-title">@saltgroup</div>
+                            <div class="footer__twitter-subtitle">Twitter feed</div>
+                        </div>
+                    </div>
+                    <div class="footer__twitter-body">
+                        <div class="footer__twitter-article">
+                            <div class="footer__twitter-name">Experience more with expanded Tweets</div>
+                            <a class="footer__twitter-link" href="#">http://testing123.com.au</a>
+                            <div class="footer__twitter-date">18 hours ago</div>
+                        </div>
+                        <div class="footer__twitter-article">
+                            <div class="footer__twitter-name">Tailored Trends bring you closer</div>
+                            <a class="footer__twitter-link" href="#">http://-testing123.com.au</a>
+                            <div class="footer__twitter-date">12 June 2016</div>
+                        </div>
+                        <div class="footer__twitter-article">
+                            <div class="footer__twitter-name">Our new nest.</div>
+                            <a class="footer__twitter-link" href="#">http://testing123.com.au</a>
+                            <div class="footer__twitter-date">11 June 2016</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__tabs">
+                    <ul class="footer__nav">
+                        <li class="footer__items">Navigation</li>
+                        <li class="footer__items"><a href="#">Home</a>
+                        </li>
+                        <li class="footer__items"><a href="#">Products</a>
+                        </li>
+                        <li class="footer__items"><a href="#">Services</a>
+                        </li>
+                        <li class="footer__items"><a href="#">Resources</a>
+                        </li>
+                        <li class="footer__items"><a href="#">About</a>
+                        </li>
+                        <li class="footer__items"><a href="#">CONTACT US</a></li>
+                    </ul>
+                    <ul class="footer__links">
+                        <li class="footer__items">links</li>
+                        <li class="footer__items"><a href="#">Disclaimer</a>
+                        </li>
+                        <li class="footer__items"><a href="#">Legal</a>
+                        </li>
+                        <li class="footer__items"><a href="#">Environment</a> <a href="#">Policy</a>
+                        </li>
+                        <li class="footer__items"><a href="#">Privacy</a></li>
+                    </ul>
+                    <ul class="footer__contacts">
+                        <li class="footer__items">contact sales</li>
+                        <li class="footer__items">PHONE: <a href="#">+61 3 9614 4416</a>
+                        </li>
+                        <li class="footer__items">EMAIL: <a href="#">sales@saltgroup.com.au</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer__bottom">
+            © 2017 SALT GROUP
+            <svg width="19" height="22" viewBox="0 0 19 22" fill="orange" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="nonzero" clip-rule="evenodd"
+                    d="M9.5 1.90526L1.64545 6.45263V15.5474L9.5 20.0947L17.3546 15.5474V6.45263L9.5 1.90526ZM19 5.5L9.5 0L0 5.5V16.5L9.5 22L19 16.5V5.5Z"
+                    fill="orange" />
+            </svg>
+            ALL RIGHTS RESERVED. WEBSITE BY DORNE CREATIVE.
+        </div>
+        <div class="footer__icon">
+            <a href="#top"> <img src="img/icons/footer-logo.png" alt="logotype"></a>
+        </div>
+    </footer>
     <script src="js/app.min.js"></script>
 </body>
 
