@@ -84,6 +84,7 @@
             background: #6047d0;
             top: 0;
             height: 65px;
+            z-index: 100;
         }
 
         &__logo {
@@ -350,6 +351,19 @@
         &__links {
             padding-left: 0;
 
+        }
+    }
+}
+
+@media (orientation: landscape) {
+    .menu {
+        &__block {
+            padding-top: 50px;
+        }
+
+        &__link {
+            font-size: 16px;
+            margin-bottom: 5px;
         }
     }
 }
