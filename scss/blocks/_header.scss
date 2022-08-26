@@ -31,12 +31,19 @@
             letter-spacing: 0.01em;
             position: relative;
 
+
             a {
                 text-decoration: none;
                 font-weight: 700;
                 font-size: 15px;
                 line-height: 18px;
                 color: #fff;
+
+
+                &:hover {
+                    color: rgb(128, 127, 127);
+
+                }
             }
 
             &:not(:last-child) {
@@ -56,6 +63,10 @@
 
     &__wrapper {
         margin-right: 54px;
+    }
+
+    &__twitter-media {
+        display: none;
     }
 
     &__title {
@@ -104,6 +115,10 @@
                 fill: #fff;
                 fill-rule: evenodd;
                 cursor: pointer;
+
+                &:hover {
+                    fill: $orange;
+                }
             }
         }
     }
@@ -123,6 +138,16 @@
 
         a {
             margin-top: 19px;
+            scroll-behavior: smooth;
+
+            svg {
+                fill: #FF8B00;
+                transition: all 0.3s;
+            }
+
+            svg:hover {
+                fill: wheat;
+            }
         }
     }
 }

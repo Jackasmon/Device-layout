@@ -1,0 +1,110 @@
+.contact-us {
+    background-image: url('../img/contact-us-bg.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-size: cover;
+
+    &__container {
+        max-width: 1338px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 55px;
+        line-height: 55px;
+        color: #fff;
+        padding-left: 56px;
+
+        span {
+            display: block;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 675px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        &-wrapper {
+            display: flex;
+            margin-bottom: 28px;
+        }
+
+        &-title {
+            font-weight: 700;
+            font-size: 28px;
+            letter-spacing: -0.02666em;
+            color: #fff;
+            margin-bottom: 28px;
+        }
+
+        &-name {
+            width: 100%;
+            margin-right: 20px;
+
+            input {
+                width: 100%;
+                @include input;
+
+
+            }
+        }
+
+        &-surname {
+            width: 100%;
+
+            input {
+                width: 100%;
+                @include input;
+
+            }
+        }
+
+        &-subtitle {
+            font-weight: 600;
+            font-size: 13px;
+            color: #fff;
+            width: 100%;
+            margin-bottom: 8px;
+        }
+
+        &-email {
+            width: 100%;
+            margin-bottom: 28px;
+
+            input {
+                width: 100%;
+                @include input;
+            }
+        }
+
+        &-text {
+            width: 100%;
+            margin-bottom: 32px;
+            @include input;
+            height: 96px;
+            padding-top: 13px;
+        }
+
+        &-btn {
+            @include btn;
+            max-width: 201px;
+            padding: 16px 0;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+}
