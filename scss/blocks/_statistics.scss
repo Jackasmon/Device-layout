@@ -1,0 +1,38 @@
+.statistics {
+    padding-top: 133px;
+    padding-bottom: 131px;
+
+    &__container {
+        max-width: 930px;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        color: $purple;
+
+        &-numbers {
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 68px;
+            text-align: center;
+        }
+
+        &-text {
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 18px;
+            max-width: 270px;
+            letter-spacing: -0.02em;
+        }
+    }
+}
