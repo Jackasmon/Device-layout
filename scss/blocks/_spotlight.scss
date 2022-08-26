@@ -1,0 +1,58 @@
+.spotlight {
+    padding-top: 115px;
+    padding-bottom: 97px;
+
+    &__container {
+        max-width: 1338px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__text {
+        max-width: 455px;
+        padding-bottom: 79px;
+        padding-left: 13px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 55px;
+        color: $purple;
+        margin-bottom: 10px;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 21px;
+        letter-spacing: -0.02em;
+        color: #878787;
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        @include btn;
+        font-weight: 700;
+        font-size: 14px;
+        color: #FFFFFF;
+        padding: 13px 47px;
+    }
+
+    &__video {
+        max-width: 724px;
+        max-height: 444px;
+
+
+        video {
+            width: 724px;
+            height: 444px;
+        }
+    }
+}
